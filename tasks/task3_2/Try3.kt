@@ -1,5 +1,7 @@
 fun main(){
     print("Enter your name:  ")
-    val name = readLine() ?: "Unknown"
+    val name = readln()
+    println(name)
     println(name.length)
+   
 }
