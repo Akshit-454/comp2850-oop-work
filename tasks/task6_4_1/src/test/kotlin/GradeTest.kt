@@ -25,12 +25,16 @@ class GradeTest : StringSpec({
     }
 
     // Add more tests here
-    "Grade of INvalid for marks below 0" {
-        withClue("Mark= -1"){ grade(-1) shouldBe "?"}
-        withClue("Mark= -10"){ grade(-10) shouldBe "?"}
+    "Grade of Invalid for marks below 0" {
+        withClue("Mark= -1") { grade(-1) shouldBe "?"}
+        withClue("Mark= -10") { grade(-10) shouldBe "?"}
+        withClue("Mark =- 100") {grade(-100) shouldBe "?"}
     }
-    "Grade of INvalid for marks above 100" {
-        withClue("Mark = 101"){ grade(101) shouldBe "?"}
-        withClue("Mark = 110"){ grade(110) shouldBe "?"}
+    "Grade of Invalid for marks above 100" {
+        withClue("Mark = 101") { grade(101) shouldBe "?"}
+        withClue("Mark = 110") { grade(110) shouldBe "?"}
+        withClue("Mark = 1000") { grade(1000) shouldBe "?"}
     }
+    "Grade of Pass for marks between 40 and 69" {
+          grade(69) shouldBe "Pass" }
 })
