@@ -11,6 +11,6 @@ fun String.howMany(include:(Char)-> Boolean):Int{
 
 fun main(){
     val string = "akshit"
-    val num = string.howMany{it in string}
+    val num = string.howMany{it == 'a'}
     println(num)
 }

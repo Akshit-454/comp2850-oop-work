@@ -9,7 +9,7 @@ fun main() {
 
         val result = numerator / denominator
         val remainder = numerator % denominator
-        println("Result = $result remainder $remainder")
+        println("Result = $result remainder = $remainder")
     }
     catch (error: NumberFormatException) {
         println("You didn't enter a valid number")
